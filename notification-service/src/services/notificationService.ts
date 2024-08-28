@@ -12,10 +12,10 @@ export async function sendNotification(
   if (canSend) {
     await rateLimitRepo.logNotification(recipient, type);
     console.log(`Notification sent to ${recipient.email} - ${type}`);
-    // Here you would add the actual email sending logic
+    // TODO -> ADD E-MAIL SENDING CODE
   } else {
     console.log(
-      `Notification not sent to ${recipient.email} - ${type} due to rate limit.`
+      `Notification not sent to ${recipient.email} due to rate limit of ${type}`
     );
   }
 }

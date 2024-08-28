@@ -14,7 +14,7 @@ export interface RateLimitRepository {
 
 export function createRedisRateLimitRepository(): RateLimitRepository {
   return {
-    async canSendNotification(recipient, type) {
+    async canSendNotification(recipient: Recipient, type: NotificationType) {
       const rule: RateLimitRule = rateLimitRules[type];
       const key = generateRedisKey(recipient.email, type);
       const currentTime = Date.now();

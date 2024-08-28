@@ -1,6 +1,6 @@
 import { redisClient } from "./infrastructure/redisClient";
 import { createRedisRateLimitRepository } from "./infrastructure/rateLimitRepository";
-import { sendNotification } from "./application/notificationService";
+import { sendNotification } from "./services/notificationService";
 import { NotificationType } from "./domain/notificationTypes";
 import { Recipient } from "./domain/recipient";
 
